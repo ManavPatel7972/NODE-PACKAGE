@@ -66,13 +66,7 @@ app.get('/',(req,res)=>{
 module.exports = app;`
   );
 
-  writeIfNotExists(
-    path.join(src, "constants.js"),
-    `module.exports = { APP_NAME: "MyApp" };`
-  );
-
-  writeIfNotExists(
-    path.join(src, "index.js"),
+  writeIfNotExists(path.join(src, "index.js"),
     `const app = require("./app");
 const { APP_NAME } = require("./constants");
 const PORT = process.env.PORT || 3000;

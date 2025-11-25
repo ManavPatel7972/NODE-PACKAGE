@@ -1,11 +1,11 @@
 {
   "name": "node-app-maker",
   "version": "1.0.0",
-  "description": "Scaffold a clean Node project structure",
+  "description": "A clean Node project structure",
   "bin": {
     "node-app-maker": "bin/index.js"
   },
-  "keywords": ["scaffold", "starter", "node", "project","app","maker"],
+  "keywords": ["starter", "node", "project","app","maker","folder","structure"],
   "author": "Manav Delvadiya",
   "license": "MIT"
 }
