@@ -20,7 +20,6 @@ Perfect for beginners learning Node.js and developers who want a ready-to-use fo
     - `utils`
 - Creates starter files:
   - `src/app.js`
-  - `src/constants.js`
   - `src/index.js`
   - `.env`
   - `.gitignore`
@@ -30,7 +29,7 @@ Perfect for beginners learning Node.js and developers who want a ready-to-use fo
 
 ---
 
-## 📦 Install (Global)
+## Install (Global)
 
 You can install the CLI globally:
 
