@@ -2,8 +2,8 @@
   "name": "node-app-maker",
   "version": "1.0.0",
   "description": "A clean Node project structure",
-  "scripts": {
-    "node-app-maker": "node index.js"
+  "bin": {
+    "node-app-maker": "./index.js"
   },
   "keywords": ["starter", "node", "project","app","maker","folder","structure"],
   "author": "Manav Delvadiya",
