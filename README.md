@@ -78,7 +78,6 @@ my-project/
 │   ├── routes/
 │   ├── utils/
 │   ├── app.js
-│   ├── constants.js
 │   └── index.js
 │
 ├── .env
