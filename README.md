@@ -47,9 +47,11 @@ Then run:
 ```bash
 node-app-maker
 
+---
+
 This command will immediately generate the full folder structure and starter files in the current directory.
 
----
+
 
 ## Example
 
