@@ -16,10 +16,17 @@ function writeIfNotExists(file, content) {
   }
 }
 
-function main() {
+function makeApp() {
   const args = process.argv.slice(2);
+
+  //   process.argv = [
+  //   "/path/to/node",         // argv[0]
+  //   "/path/to/create.js",    // argv[1]
+  //   "myproject"              // argv[2] user argument
+  // ]
+
   const targetName = args[0] || ".";
-  const targetPath = path.resolve(process.cwd(), targetName);
+  const targetPath = path.join(process.cwd(), targetName);
 
   if (!fs.existsSync(targetPath)) {
     fs.mkdirSync(targetPath, { recursive: true });
@@ -59,18 +66,20 @@ function main() {
     path.join(src, "app.js"),
     `const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 3000;
 app.get('/',(req,res)=>{
     res.send("<h1>This Package Is Created By Manav Delvadiya</h1>");
-})
+});
+app.listen(PORT, () => console.log(\`Server running on port ${PORT}\`));
 module.exports = app;`
   );
 
-  writeIfNotExists(
-    path.join(src, "index.js"),
-    `const app = require("./app");
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(\`Server running on port ${PORT}\`));`
-  );
+//   writeIfNotExists(
+//     path.join(src, "index.js"),
+//     `const app = require("./app");
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => console.log(\`Server running on port ${PORT}\`));`
+//   );
 
   console.log("\nComplete!");
   console.log(`Next steps:
@@ -79,4 +88,4 @@ app.listen(PORT, () => console.log(\`Server running on port ${PORT}\`));`
   npm install express`);
 }
 
-main();
+makeApp();
