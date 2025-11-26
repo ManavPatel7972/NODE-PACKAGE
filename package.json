@@ -5,7 +5,7 @@
   "bin": {
     "node-app-maker": "./index.js"
   },
-  "keywords": ["starter", "node", "project","app","maker","folder","structure"],
+  "keywords": ["node","app","maker","folder","structure","starter", "project"],
   "author": "Manav Delvadiya",
   "license": "MIT"
 }
