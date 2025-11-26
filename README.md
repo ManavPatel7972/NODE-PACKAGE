@@ -20,7 +20,6 @@ Perfect for beginners learning Node.js and developers who want a ready-to-use fo
     - `utils`
 - Creates starter files:
   - `src/app.js`
-  - `src/index.js`
   - `.env`
   - `.gitignore`
   - `README.md`
