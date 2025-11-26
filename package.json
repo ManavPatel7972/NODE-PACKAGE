@@ -1,6 +1,6 @@
 {
   "name": "node-app-maker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A clean Node project structure",
   "bin": {
     "node-app-maker": "./index.js"
