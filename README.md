@@ -1,89 +1,195 @@
 # node-app-maker
 
-A simple and fast CLI tool to create a clean Node.js project structure with one command.  
-This tool automatically generates folders like `src`, `controllers`, `routes`, and also creates basic starter files.
+A simple and fast CLI tool to generate a clean Node.js project structure automatically.
 
-Perfect for beginners learning Node.js and developers who want a ready-to-use folder structure.
+This tool helps you instantly scaffold a complete Node.js project folder with:
 
----
-
-## Features
-
-- Creates a clean Node.js project structure
-- Generates folders:
-  - `public`
-  - `src`
-    - `controllers`
-    - `middlewares`
-    - `models`
-    - `routes`
-    - `utils`
-- Creates starter files:
-  - `src/app.js`
-  - `.env`
-  - `.gitignore`
-  - `README.md`
-- Works using a single command  
-- No extra configuration needed
+- `public/`
+- `src/` -> `controllers`, `models`, `routes`, `middlewares`, `utils`
+- Basic `app.js`
+- `.env`, `.gitignore`, `README.md`
+- Automatic folder creation using `process.cwd()`
 
 ---
 
-## Install (Global)
+## Installation
 
-You can install the CLI globally:
+You can use **any one** of the following methods.
+
+---
+
+## ** 1 Global Installation (Recommended)**
+
+Install globally so the command works anywhere:
 
 ```bash
 npm install -g node-app-maker
+```
 
----
-
-## Usage (Create Project Structure Instantly)
-
-After installing the package globally, stay in your current folder where you want your Node.js project structure to be created.
-
-Then run:
+Now you can run:
 
 ```bash
 node-app-maker
+```
 
 ---
 
-This command will immediately generate the full folder structure and starter files in the current directory.
-
-
-
-## Example
-
-Step 1 — Move to your desired folder
+## ** 2 Local Installation (Inside a project)**
 
 ```bash
-cd Desktop/my-project
+npm install node-app-maker
+```
 
-Step 2 — Run the CLI
+Use via NPX:
+
+```bash
+npx node-app-maker
+```
+
+---
+
+## ** 3 No Installation (One-time run using NPX)**
+
+This downloads and executes directly from npm:
+
+```bash
+npx node-app-maker
+```
+
+---
+
+#  Usage
+
+Go to the folder where you want to create the project:
+
+```bash
+cd D:\Projects\my-app
+node-app-maker
+```
+
+or (if installed locally)
+
+```bash
+npx node-app-maker
+```
+
+---
+
+## Folder Structure Created
+
+```
+project/
+│-- public/
+│
+└─── src/
+     │-- app.js
+     │-- controllers/
+     │-- models/
+     │-- routes/
+     │-- middlewares/
+     │-- utils/
+│
+│-- .env
+│-- .gitignore
+│-- README.md
+```
+
+---
+
+# Command Options
+
+### **Create project in current folder**
 
 ```bash
 node-app-maker
+```
 
-Step 3 — Done Your project structure is ready !
+### **Create project inside a new folder**
 
-my-project/
-│
-├── public/
-│
-├── src/
-│   ├── controllers/
-│   ├── middlewares/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   ├── app.js
-│   └── index.js
-│
-├── .env
-├── .gitignore
-└── README.md
+```bash
+node-app-maker myproject
+```
 
+This will create:
+
+```
+myproject/public
+myproject/src
+...
+```
+
+---
+
+# ! Windows Users: PATH Fix
+
+If you installed globally but see this error:
+
+```
+'node-app-maker' is not recognized as an internal or external command
+```
+
+Fix:
+
+### 1. Check prefix path:
+
+```bash
+npm config get prefix
+```
+
+### 2. Add this path to **Environment Variables → PATH**:
+
+```
+C:\Users\YOUR_USERNAME\AppData\Roaming\npm
+```
+
+Restart VS Code / CMD.
+
+---
+
+# Example Commands
+
+```bash
+mkdir myproject
+cd myproject
+node-app-maker
+```
+
+```bash
+node-app-maker myapi
+```
+
+```bash
+npx node-app-maker
+```
 
 ---
 
 
+# Troubleshooting
+
+### Command not recognized
+
+```bash
+npm install -g node-app-maker
+```
+
+or
+
+```bash
+npx node-app-maker
+```
+
+---
+
+### Folders created inside node_modules
+
+Cause: running from `node_modules/node-app-maker`.
+
+Fix:
+
+```bash
+cd D:\Projects\myapp
+node-app-maker
+```
+
+---
