@@ -58,12 +58,12 @@ function makeApp() {
 
   writeIfNotExists(
     path.join(targetPath, ".env"),
-    "# Environment variables\n\nPORT=3000\nMONGODB_URL=\nACCESSS_TOKEN_SECRET=\nACCESS_TOKEN_EXPIRY=\nREFRESH_TOKEN_SECRET=\nCORS=\nCLOUDINARY_CLOUD_NAME=\nCLOUDINARY_API_KEY=\nCLOUDINARY_API_SECRET=\n"
+    "# Environment variables\n\nPORT=3000\nMONGODB_URL=\nCORS_ORIGIN=*\nACCESSS_TOKEN_SECRET=\nACCESS_TOKEN_EXPIRY=\nREFRESH_TOKEN_SECRET=\n\nCLOUDINARY_CLOUD_NAME=\nCLOUDINARY_API_KEY=\nCLOUDINARY_API_SECRET=\n"
   );
 
   // src files
   writeIfNotExists(
-    path.join(src, "app.js"),
+    path.join(src, "index.js"),
     `const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
