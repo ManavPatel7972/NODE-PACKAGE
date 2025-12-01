@@ -71,16 +71,11 @@ const PORT = process.env.PORT || 3000;
 app.get('/',(req,res)=>{
     res.send("<h1>This Package Is Created By Manav Delvadiya</h1>");
 });
-app.listen(PORT, () => console.log(\`server running at https://localhost:${PORT}\`));
+app.listen(PORT, () => console.log(\`server running at https://localhost:\${PORT}\`));
 module.exports = app;`
   );
 
-  //   writeIfNotExists(
-  //     path.join(src, "index.js"),
-  //     `const app = require("./app");
-  // const PORT = process.env.PORT || 3000;
-  // app.listen(PORT, () => console.log(\`Server running on port ${PORT}\`));`
-  //   );
+  writeIfNotExists(path.join(src, "app.js"), ``);
 
   console.log("\nComplete!");
   console.log(`Next steps:
