@@ -41,7 +41,7 @@ function makeApp() {
 
   // Create src subfolders
   const src = path.join(targetPath, "src");
-  const folder = ["controllers", "middlewares", "models", "routes", "utils"];
+  const folder = ["db","controllers", "middlewares", "models", "routes", "services"];
 
   folder.forEach((dir) => safeMkdir(path.join(src, dir)));
 
