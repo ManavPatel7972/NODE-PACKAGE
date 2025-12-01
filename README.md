@@ -6,7 +6,7 @@ This tool helps you instantly scaffold a complete Node.js project folder with:
 
 - `public/`
 - `src/` -> `db,controllers`, `models`, `routes`, `middlewares`, `services`
-- Basic `index.js`
+- Basic `index.js, app.js`
 - `.env`, `.gitignore`, `README.md`
 - Automatic folder creation using `process.cwd()`
 
@@ -83,6 +83,7 @@ project/
 │
 └─── src/
      │-- index.js
+     |-- app.js
      |-- db/
      │-- controllers/
      │-- models/
