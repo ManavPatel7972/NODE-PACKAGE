@@ -37,11 +37,12 @@ function makeApp() {
 
   // Create root folders
   safeMkdir(path.join(targetPath, "public"));
+  safeMkdir(path.join(targetPath, "public/uploads")); 
   safeMkdir(path.join(targetPath, "src"));
 
   // Create src subfolders
   const src = path.join(targetPath, "src");
-  const folder = ["db","controllers", "middlewares", "models", "routes", "services"];
+  const folder = ["config","db","controllers", "middlewares", "models", "routes", "services", "utils"];
 
   folder.forEach((dir) => safeMkdir(path.join(src, dir)));
 
@@ -70,7 +71,7 @@ const PORT = process.env.PORT || 3000;
 app.get('/',(req,res)=>{
     res.send("<h1>This Package Is Created By Manav Delvadiya</h1>");
 });
-app.listen(PORT, () => console.log(\`Server running on port \${PORT}\`));
+app.listen(PORT, () => console.log(\`server running at https://localhost:${PORT}\`));
 module.exports = app;`
   );
 
