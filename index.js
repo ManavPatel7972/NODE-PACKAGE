@@ -58,7 +58,7 @@ function makeApp() {
 
   writeIfNotExists(
     path.join(targetPath, ".env"),
-    "# Environment variables\nPORT=3000\n"
+    "# Environment variables\n\nPORT=3000\nMONGODB_URL=\nACCESSS_TOKEN_SECRET=\nACCESS_TOKEN_EXPIRY=\nREFRESH_TOKEN_SECRET=\nCORS=\nCLOUDINARY_CLOUD_NAME=\nCLOUDINARY_API_KEY=\nCLOUDINARY_API_SECRET=\n"
   );
 
   // src files
@@ -74,12 +74,12 @@ app.listen(PORT, () => console.log(\`Server running on port \${PORT}\`));
 module.exports = app;`
   );
 
-//   writeIfNotExists(
-//     path.join(src, "index.js"),
-//     `const app = require("./app");
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => console.log(\`Server running on port ${PORT}\`));`
-//   );
+  //   writeIfNotExists(
+  //     path.join(src, "index.js"),
+  //     `const app = require("./app");
+  // const PORT = process.env.PORT || 3000;
+  // app.listen(PORT, () => console.log(\`Server running on port ${PORT}\`));`
+  //   );
 
   console.log("\nComplete!");
   console.log(`Next steps:
