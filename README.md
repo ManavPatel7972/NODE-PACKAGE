@@ -5,7 +5,7 @@ A simple and fast CLI tool to generate a clean Node.js project structure automat
 This tool helps you instantly scaffold a complete Node.js project folder with:
 
 - `public/`
-- `src/` -> `controllers`, `models`, `routes`, `middlewares`, `utils`
+- `src/` -> `db,controllers`, `models`, `routes`, `middlewares`, `services`
 - Basic `app.js`
 - `.env`, `.gitignore`, `README.md`
 - Automatic folder creation using `process.cwd()`
@@ -83,11 +83,12 @@ project/
 │
 └─── src/
      │-- app.js
+     |-- db/
      │-- controllers/
      │-- models/
      │-- routes/
      │-- middlewares/
-     │-- utils/
+     │-- services/
 │
 │-- .env
 │-- .gitignore
@@ -233,7 +234,6 @@ npx node-app-maker
 ---
 
 
-# Troubleshooting
 
 ### Command not recognized
 
