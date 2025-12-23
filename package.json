@@ -6,11 +6,13 @@
     "node-app-maker": "./index.js"
   },
   "keywords": [
+    "express",
+    "folder",
+    "structure",
+    "scaffold",
     "node",
     "app",
     "maker",
-    "folder",
-    "structure",
     "starter",
     "project"
   ],
